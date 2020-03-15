@@ -1,9 +1,17 @@
 Bug: Character can jump an infinite amount of times
+  Reported by: Osama
   When: It happens when the player presses the space bar over and over 
   How often: Everytime the game is played
-  Assigne: Frank Buttafuoco
+  Assignee: Osama
     Fixed: Yes
     How: Changed the code to only allow jump on mouse down
     Status: Closed
     
-Bug:
+Bug: Projectiles fire more then once
+  Reported by: Frank 
+  When: everytime the mouse button is pressed
+  How often: everytime the game is launched
+  Assignee: Frank
+    Fixed: Yes
+    How: Made the projectile fire on mouse down only
+    Status: Closed
