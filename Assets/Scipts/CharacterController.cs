@@ -8,7 +8,9 @@ public class CharacterController : MonoBehaviour
     public float rotationSpeed = 90;
     public float force = 700f;
     public GameObject cannon;
+    public GameObject wind;
     public GameObject bullet;
+    public int counter = 0;
 
     Rigidbody rb;
     Transform t;
@@ -33,14 +35,34 @@ public class CharacterController : MonoBehaviour
         else if (Input.GetKey(KeyCode.A))
             t.rotation *= Quaternion.Euler(0, - rotationSpeed * Time.deltaTime, 0);
 
-        if (Input.GetKeyDown(KeyCode.Space))
-            rb.AddForce(t.up * force);
+        if (Input.GetKeyDown(KeyCode.C))
+            if (counter == 0)
+            {
+                counter = 1;
 
-        if (Input.GetButtonDown("Fire1")){
-            GameObject newBullet = GameObject.Instantiate(bullet, cannon.transform.position, cannon.transform.rotation) as GameObject;
-            newBullet.AddComponent<Rigidbody>();
-            newBullet.GetComponent<Rigidbody>().velocity += Vector3.up * 10;
-            newBullet.GetComponent<Rigidbody>().AddForce(newBullet.transform.forward * 1500);
+            }
+            else
+            {
+                counter = 0;
+            }
+
+
+        if (Input.GetButtonDown("Fire1"))
+        {
+            if (counter == 0)
+            {
+                GameObject newBullet = GameObject.Instantiate(bullet, cannon.transform.position, cannon.transform.rotation) as GameObject;
+                newBullet.AddComponent<Rigidbody>();
+                newBullet.GetComponent<Rigidbody>().velocity += Vector3.up * 10;
+                newBullet.GetComponent<Rigidbody>().AddForce(newBullet.transform.forward * 1500);
+            }
+            if( counter == 1)
+            {
+                GameObject newBullet = GameObject.Instantiate(wind, cannon.transform.position, cannon.transform.rotation) as GameObject;
+                newBullet.AddComponent<Rigidbody>();
+                newBullet.GetComponent<Rigidbody>().velocity += Vector3.up * 10;
+                newBullet.GetComponent<Rigidbody>().AddForce(newBullet.transform.forward * 1500);
+            }
         }
     }
 }
