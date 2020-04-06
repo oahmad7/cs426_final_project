@@ -11,6 +11,8 @@ public class CharacterController : MonoBehaviour
     public GameObject wind;
     public GameObject bullet;
     public int counter = 0;
+    public AudioSource fire;
+    public AudioSource windSound;
 
     Rigidbody rb;
     Transform t;
@@ -55,6 +57,7 @@ public class CharacterController : MonoBehaviour
                 newBullet.AddComponent<Rigidbody>();
                 newBullet.GetComponent<Rigidbody>().velocity += Vector3.up * 10;
                 newBullet.GetComponent<Rigidbody>().AddForce(newBullet.transform.forward * 1500);
+                fire.Play();
             }
             if( counter == 1)
             {
@@ -62,6 +65,7 @@ public class CharacterController : MonoBehaviour
                 newBullet.AddComponent<Rigidbody>();
                 newBullet.GetComponent<Rigidbody>().velocity += Vector3.up * 10;
                 newBullet.GetComponent<Rigidbody>().AddForce(newBullet.transform.forward * 1500);
+                windSound.Play();
             }
         }
     }
