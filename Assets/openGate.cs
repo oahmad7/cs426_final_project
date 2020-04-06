@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SetTrap : MonoBehaviour
+public class openGate : MonoBehaviour
 {
-    public GameObject Trap;
+    public GameObject Gate;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,7 +14,7 @@ public class SetTrap : MonoBehaviour
     // Update is called once per frame
     void OnCollisionEnter(Collision collision)
     {
-        Trap.SetActive(true);
+        Gate.SetActive(false);
         Destroy(gameObject);
     }
 }
