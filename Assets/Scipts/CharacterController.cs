@@ -13,6 +13,7 @@ public class CharacterController : MonoBehaviour
     public int counter = 0;
     public AudioSource fire;
     public AudioSource windSound;
+    public AudioSource Death;
 
     Rigidbody rb;
     Transform t;
@@ -74,7 +75,11 @@ public class CharacterController : MonoBehaviour
     {
         if (collisionInfo.collider.tag == "Enemy")
         {
+            
             FindObjectOfType<GameManager>().EndGame();
+            Death.Play();
+
         }
+
     }
 }

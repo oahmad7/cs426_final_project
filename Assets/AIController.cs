@@ -10,6 +10,8 @@ public class AIController : MonoBehaviour
     int MaxDist = 10;
     int MinDist = 5;
     public int health = 3;
+    public AudioSource Attack;
+  
 
 
 
@@ -25,26 +27,33 @@ public class AIController : MonoBehaviour
         //if (Vector3.Distance(transform.position, Player.position) >= MinDist)
         //{
 
-            transform.position += transform.forward * MoveSpeed * Time.deltaTime;
+        transform.position += transform.forward * MoveSpeed * Time.deltaTime;
 
 
 
-           // if (Vector3.Distance(transform.position, Player.position) <= MaxDist)
-            //{
-                //Here Call any function U want Like Shoot at here or something
-            //}
+        // if (Vector3.Distance(transform.position, Player.position) <= MaxDist)
+        //{
+        //Here Call any function U want Like Shoot at here or something
+        //}
 
-       // }
+        // }
     }
-    void OnCollisionEnter()
-    {   
-        if(health == 0)
+    void OnCollisionEnter(Collision collisionInfo)
+    {
+        if (health == 0)
         {
-            Destroy (gameObject);
+            Destroy(gameObject);
         }
         else
         {
             health = health - 1;
+        }
+        if (collisionInfo.collider.tag == "Player")
+        {
+
+
+            Attack.Play();
+
         }
     }
 }
