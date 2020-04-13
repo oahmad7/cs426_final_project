@@ -5,7 +5,7 @@ using UnityEngine;
 public class CharacterController : MonoBehaviour
 {
     public float speed = 25.0f;
-    public float rotationSpeed = 90;
+    public float rotationSpeed = 45;
     public float force = 700f;
     public GameObject cannon;
     public GameObject wind;
@@ -58,6 +58,7 @@ public class CharacterController : MonoBehaviour
                 newBullet.GetComponent<Rigidbody>().velocity += Vector3.up * 10;
                 newBullet.GetComponent<Rigidbody>().AddForce(newBullet.transform.forward * 1500);
                 fire.Play();
+            
             }
             if( counter == 1)
             {
@@ -67,6 +68,13 @@ public class CharacterController : MonoBehaviour
                 newBullet.GetComponent<Rigidbody>().AddForce(newBullet.transform.forward * 1500);
                 windSound.Play();
             }
+        }
+    }
+    void OnCollisionEnter(Collision collisionInfo)
+    {
+        if (collisionInfo.collider.tag == "Enemy")
+        {
+            FindObjectOfType<GameManager>().EndGame();
         }
     }
 }

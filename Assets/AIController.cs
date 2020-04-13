@@ -9,7 +9,7 @@ public class AIController : MonoBehaviour
     public int MoveSpeed = 4;
     int MaxDist = 10;
     int MinDist = 5;
-
+    public int health = 3;
 
 
 
@@ -35,5 +35,16 @@ public class AIController : MonoBehaviour
             //}
 
        // }
+    }
+    void OnCollisionEnter()
+    {   
+        if(health == 0)
+        {
+            Destroy (gameObject);
+        }
+        else
+        {
+            health = health - 1;
+        }
     }
 }
