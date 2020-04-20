@@ -9,3 +9,6 @@ The gameplay reflects this theme by allowing the user to cast spells and explore
 
 4/13
 We made some modifications to the game design in this iteration of the game. For starters, we added alot audio to the game from enemy attack and walking sounds, to player movement sounds, to audio queues when tasks are completed and background audio. All of this was done to imporve the atmosphere of the game and give the player more feedback from the game so they are aware of the systems of the games at all times. Additionally, we made substatial changes to the UI by adding the controls permenantly on screen as well as an onscreen indicator for the type of spell the player is currently holding. This is done so that give the player up-to-date information and provide ease of learnability.
+
+4/20
+We added a number of major features to this version of the game. We implemented shaders onto some objects to give them extra visual flare and pop. We added an introduction menu complete with a Story section as well as credits and a way to exit the game. Within that menu is a tutorial that allows the user to mess around with the mechanics of the game before entering the game proper. Based on the feedback we got from players we implemented the tutorial section to get players acclimated to the game as well as a option side quest to get a special powerup for added variety and fun.
