@@ -7,15 +7,24 @@ using UnityEngine.SceneManagement;
 
 public class levelComplete : MonoBehaviour
 {
+    public AudioSource Complete;
 
-    void OnTriggerEnter(Collider collisionInfo)
+
+    void OnCollisionEnter(Collision collisionInfo)
     {
+        Debug.Log("Door touched");
         //other.name should equal the root of your Player object
-       if (collisionInfo.collider.tag == "Player")
+        if (collisionInfo.gameObject.tag == "Player")
         {
 
-      Debug.Log("Door touched");
-           SceneManager.LoadScene(0);
+            Invoke("Menu", 2f);
+            Complete.Play();
+
+            //SceneManager.LoadScene(0);
         }
+    }
+    void Menu()
+    {
+        SceneManager.LoadScene(0);
     }
 }
