@@ -14971,7 +14971,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 110a7835d223d1a4da68b7f495be12b6, type: 2}
+  - {fileID: 2100000, guid: b7d53b9fb1d382d40923eee29c69f44d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -15889,7 +15889,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 3e2ec23cf2f8c564d96b2444b77de128, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.488
+  m_Volume: 0.212
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -27771,6 +27771,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3210736750116180235, guid: 44e85a7637073ee4b9dfa631e065de49,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b7d53b9fb1d382d40923eee29c69f44d, type: 2}
+    - target: {fileID: 3210736751312033692, guid: 44e85a7637073ee4b9dfa631e065de49,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b7d53b9fb1d382d40923eee29c69f44d, type: 2}
     - target: {fileID: 3210736751368812425, guid: 44e85a7637073ee4b9dfa631e065de49,
         type: 3}
       propertyPath: m_Mesh
@@ -35066,7 +35076,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 110a7835d223d1a4da68b7f495be12b6, type: 2}
+  - {fileID: 2100000, guid: b7d53b9fb1d382d40923eee29c69f44d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -39657,6 +39667,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1450261163}
     m_Modifications:
+    - target: {fileID: 3210736750116180235, guid: 44e85a7637073ee4b9dfa631e065de49,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b7d53b9fb1d382d40923eee29c69f44d, type: 2}
+    - target: {fileID: 3210736751312033692, guid: 44e85a7637073ee4b9dfa631e065de49,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b7d53b9fb1d382d40923eee29c69f44d, type: 2}
     - target: {fileID: 3210736751368812425, guid: 44e85a7637073ee4b9dfa631e065de49,
         type: 3}
       propertyPath: m_Mesh
