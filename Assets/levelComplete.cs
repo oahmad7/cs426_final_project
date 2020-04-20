@@ -1,18 +1,21 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using System.Collections;
 using UnityEngine;
+//Make sure to add this, or you can't use SceneManager
+using UnityEngine.SceneManagement;
+
 
 public class levelComplete : MonoBehaviour
 {
-    public AudioSource complete;
-    void OnCollisionEnter(Collision collisionInfo)
+
+    void OnTriggerEnter(Collider collisionInfo)
     {
-        if (collisionInfo.collider.tag == "Player")
+        //other.name should equal the root of your Player object
+       if (collisionInfo.collider.tag == "Player")
         {
 
-            complete.Play();
-
+      Debug.Log("Door touched");
+           SceneManager.LoadScene(0);
         }
-
     }
 }
