@@ -54,12 +54,14 @@ public class CharacterController : MonoBehaviour
         {
             if (counter == 0)
             {
+                
                 GameObject newBullet = GameObject.Instantiate(bullet, cannon.transform.position, cannon.transform.rotation) as GameObject;
                 newBullet.AddComponent<Rigidbody>();
                 newBullet.GetComponent<Rigidbody>().velocity += Vector3.up * 10;
                 newBullet.GetComponent<Rigidbody>().AddForce(newBullet.transform.forward * 1500);
                 fire.Play();
-            
+                Object.Destroy(newBullet, 2.0f);
+
             }
             if( counter == 1)
             {
@@ -68,6 +70,7 @@ public class CharacterController : MonoBehaviour
                 newBullet.GetComponent<Rigidbody>().velocity += Vector3.up * 10;
                 newBullet.GetComponent<Rigidbody>().AddForce(newBullet.transform.forward * 1500);
                 windSound.Play();
+                Object.Destroy(newBullet, 2.0f);
             }
         }
     }
